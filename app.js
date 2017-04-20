@@ -34,7 +34,7 @@ catPicture.src= ""
 
 function reset(){
     mrFluffy.petCount;
-    petCount.innerHTML = counter;
+    petCount.innerHTML = mrFluffy.petCount
     catButton.disabled = false
     catStatus.innerHTML = mrFluffy.happyStatus
     mrFluffy.imgUrl = "http://static.boredpanda.com/blog/wp-content/uploads/2016/05/surprised-cat-hydrocephalus-kevin-theadventuresofkev23.jpg";
