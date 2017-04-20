@@ -1,21 +1,30 @@
-
 var petCount = document.getElementById("petCount");
 var catStatus = document.getElementById("catStatus");
-var counter = 0;
 var catButton = document.getElementById("catButton");
 var catPicture = document.getElementById("catPicture");
 
+var mrFluffy ={
+    name: "Mr. Fluffy",
+    imgUrl: "http://static.boredpanda.com/blog/wp-content/uploads/2016/05/surprised-cat-hydrocephalus-kevin-theadventuresofkev23.jpg",
+    happyStatus: "Purrrrrrrr",
+    grumpyStatus: "RWAR",
+    feralStatus: "HISS",
+    goneStatus: "RAN AWAY",
+    petCount: 0
+}
+
+
 function petCat(){
-counter++;
-petCount.innerHTML = counter;
-if(counter > 5){
-catStatus.innerHTML = "RWAR";
+mrFluffy.petCount++
+petCount.innerHTML = mrFluffy.petCount;
+if(mrFluffy.petCount > 5){
+catStatus.innerHTML = mrFluffy.grumpyStatus
 }
-if(counter >= 9){
-catStatus.innerHTML = "HISS";
+if(mrFluffy.petCount >= 9){
+catStatus.innerHTML = mrFluffy.feralStatus
 }
-if(counter >= 10){
-catStatus.innerHTML = "RAN AWAY";
+if(mrFluffy.petCount >= 10){
+catStatus.innerHTML = mrFluffy.goneStatus
 catButton.disabled = true
 catPicture.src= ""
 
@@ -24,10 +33,10 @@ catPicture.src= ""
 }
 
 function reset(){
-    counter = 0;
+    mrFluffy.petCount;
     petCount.innerHTML = counter;
     catButton.disabled = false
-    catStatus.innerHTML = "Purrrrrr";
-    catPicture.src = "http://static.boredpanda.com/blog/wp-content/uploads/2016/05/surprised-cat-hydrocephalus-kevin-theadventuresofkev23.jpg";
+    catStatus.innerHTML = mrFluffy.happyStatus
+    mrFluffy.imgUrl = "http://static.boredpanda.com/blog/wp-content/uploads/2016/05/surprised-cat-hydrocephalus-kevin-theadventuresofkev23.jpg";
 }
 
